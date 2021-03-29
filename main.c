@@ -1,21 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+float objetosc_prostopadloscianu();
 int main()
 {
 for(;;)
 {
 int c=68 ;
-///////////prostopadloscian/////////////////
-int a;// podstawa prostopadloscianu
-int b; // podstawa prostopadloscianu
-int d;// wysokosc prostopadlosciannu
-int wynik;
-/////////////////////////////////////////
-int pods;
-int h;
-int wynik2;
-int t;
+
 printf("wybierz cos\n");
 printf("1.objetosc prostopadloscianu\n");
 printf("2.pole trojkata\n");
@@ -24,21 +15,10 @@ scanf("%d", &c);
 switch (c)
 
 {
-//objetosc prostopadloscianu
+
 case 1:
 
-    printf("wprowadz a\n");
-    scanf("%d", &a);
-    printf("wprowadz b\n");
-    scanf("%d", &b);
-    printf("wprowadz wysokosc prostopadloscianu\n");
-    scanf("%d", &d);
-    wynik = a*b*d;
-    printf("wynik=" "%d\n", wynik);
-    scanf("%d", &t);
-    break;
-    ////////////////////////////////////////////////////////////////
-
+objetosc_prostopadloscianu();
 case 2:
     return 0;
 default:
@@ -50,5 +30,34 @@ default:
 
     return 0;
 
-}
+};
+float objetosc_prostopadloscianu()
+{
+    float a, b, c, wynik;
+    printf("wprowadz a\n");
+    scanf("%f", &a);
+    if (a<=0)
+    {
+         printf("a musi byc wieksze od 0\n");
+         exit (EXIT_FAILURE);
+    };
+     printf("wprowadz b\n");
+    scanf("%f", &b);
+    if (b<=0)
+    {
+         printf("b musi byc wieksze od 0\n");
+         exit (EXIT_FAILURE);
+    };
+     printf("wprowadz c\n");
+    scanf("%f", &c);
+    if (c<=0)
+    {
+         printf("c musi byc wieksze od 0\n");
+         exit (EXIT_FAILURE);
+    };
+    wynik = a*b*c;
+    printf("wynik= ""%f", wynik);
+    return wynik;
 
+
+};
