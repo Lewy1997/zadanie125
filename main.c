@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <conio.h>
 
+
 float objetosc_prostopadloscianu();
 float objetosc_ostroslupa();
 
@@ -9,6 +10,7 @@ int main()
 {
 for(;;)
 {
+
 int c=68 ;
 
 printf("Wybierz bryle\n");
